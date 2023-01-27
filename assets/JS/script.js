@@ -1,34 +1,34 @@
 const quizData = [
     {
         question: 'What language defines HyperText Markup Language?',
-        1: 'HTML',
-        2: 'Java',
-        3: 'Css',
-        4: 'Python',
-        correct: '1',
+        a: 'HTML',
+        b: 'Java',
+        c: 'Css',
+        d: 'Python',
+        correct: 'a',
     },
     {
         question: 'What do "Arrays" accomplish in JavaScript?',
-        1: 'Store Data',
-        2: 'Make a page look good',
-        3: 'Change formatting',
-        4: 'Stores multiple items in a list in a single variable',
+        a: 'Store Data',
+        b: 'Make a page look good',
+        c: 'Change formatting',
+        d: 'Stores multiple items in a list in a single variable',
         correct: '4',
     },
     {
         question: 'What is the function called when you want to change the color of your background in CSS?',
-        1: 'text-align',
-        2: 'Background-color',
-        3: 'justfy-content',
-        4: 'margin',
-        correct:'2',
+        a: 'text-align',
+        b: 'Background-color',
+        c: 'justfy-content',
+        d: 'margin',
+        correct:'b',
     },
     {
         question: 'What tag in HTML creates a paragragh?',
-        1: '<h2>',
-        2: '<br>',
-        3: '<p>',
-        4: '<section>',
+        a: '<h2>',
+        b: '<br>',
+        c: '<p>',
+        d: '<section>',
         correct: '3',
     },
 ];
@@ -54,7 +54,7 @@ function loadQuiz() {
 
     const currentQuizData = quizData[currentQuiz]
 
-    questionEl.innertext = currentQuizData.question
+    questionEl.innerText = currentQuizData.question
     a_text.innerText = currentQuizData.a
     b_text.innerText = currentQuizData.b
     c_text.innerText = currentQuizData.c
@@ -66,12 +66,12 @@ function deselectAnswers() {
 }
 
 function getSelected() {
-    let answer
-    answerEls.forEach(answerEls => {
-        if(answerEl.checked){
+    let answerEls
+    answerEls.forEach(answerEl => {
+        if(answerEl.checked) {
             answer = answerEl.id
         }
-    }) 
+    })
     return answer 
 }
 
