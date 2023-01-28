@@ -62,24 +62,25 @@ function loadQuiz() {
 }
 
 function deselectAnswers() {
-    answerEls.forEach(answerEls => answerEls.checked = false)
+    answerEls.forEach(answerEl => answerEl.checked = false)
 }
 
 function getSelected() {
-    let answerEls
-    answerEls.forEach(answerEl => {
+    let answer
+    answerEls.forEach((answerEl) => {
         if(answerEl.checked) {
             answer = answerEl.id
         }
     })
-    return answer 
+    return answer  
 }
 
-submitBtn.addEventListener('click',() => {
+submitBtn.addEventListener('click', () => {
     const answer = getSelected()
     if(answer) {
         if(answer === quizData[currentQuiz].correct) {
-             score++
+
+            score++
         }
 
         currentQuiz++
