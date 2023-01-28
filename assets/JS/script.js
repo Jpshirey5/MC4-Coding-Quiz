@@ -13,7 +13,7 @@ const quizData = [
         b: 'Make a page look good',
         c: 'Change formatting',
         d: 'Stores multiple items in a list in a single variable',
-        correct: '4',
+        correct: 'd',
     },
     {
         question: 'What is the function called when you want to change the color of your background in CSS?',
@@ -29,7 +29,7 @@ const quizData = [
         b: '<br>',
         c: '<p>',
         d: '<section>',
-        correct: '3',
+        correct: 'c',
     },
 ];
 
@@ -62,7 +62,7 @@ function loadQuiz() {
 }
 
 function deselectAnswers() {
-    answerEls.forEach(answerEl => answerEl.checked = false)
+    answerEls.forEach(answerEls => answerEls.checked = false)
 }
 
 function getSelected() {
