@@ -13,10 +13,16 @@
 </head>
 
 <body>
-<section class="quiz-container" id="quiz">
- <div class="quiz-header">
-   <h2 id="question">Question Text</h2>
+<div id="front-page">
+    <h2>Welcome to the Coding Quiz! <br> Let's test your coding knowledge!</h2>
+    <button id="start-button">Let's begin!</button>
+  </div>
+  
+  <div id="quiz" style="display: none;">
 
+  <section class="quiz-container" id="quiz">
+      <div class="quiz-header">
+        <h2 id="question">Question Text</h2>
    <ol>
     <li>
       <input type="radio" name="answer" id="a" class="answer">
@@ -42,6 +48,7 @@
 
    <button id="submit">Submit</button>
   </section>   
+ </div>
 </div>
 
   <script src="./assets/JS/script.js"></script>
